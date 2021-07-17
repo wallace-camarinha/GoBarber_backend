@@ -19,7 +19,7 @@ export default function ensureAuth(
     throw new Error('Token missing');
   }
 
-  const [, token] = authHeaders.split('  ');
+  const [, token] = authHeaders.split(' ');
 
   try {
     const decoded = verify(token, authConfig.jwt.secret);
@@ -29,7 +29,6 @@ export default function ensureAuth(
     request.user = {
       id: sub,
     };
-
     return next();
   } catch (err) {
     throw new Error('Invalid Token');
