@@ -16,11 +16,11 @@ class UpdateUserAvatarService {
     const usersRepository = getRepository(User);
     const user = await usersRepository.findOne(user_id);
 
-    if (!user_id) {
+    if (!user) {
       throw new AppError('Only authenticated users can change the avatar', 401);
     }
 
-    if (user?.avatar) {
+    if (user.avatar) {
       const userAvatarFilePPath = path.join(
         uploadConfig.directory,
         user.avatar,
@@ -33,17 +33,17 @@ class UpdateUserAvatarService {
       }
     }
 
-    user!.avatar = avatarFilename;
+    user.avatar = avatarFilename;
 
-    await usersRepository.save(user!);
+    await usersRepository.save(user);
 
     const userWithoutPassword = {
-      id: user?.id,
-      name: user?.name,
-      email: user?.email,
-      avatar: user?.avatar,
-      created_at: user?.created_at,
-      updated_at: user?.updated_at,
+      id: user.id,
+      name: user.name,
+      email: user.email,
+      avatar: user.avatar,
+      created_at: user.created_at,
+      updated_at: user.updated_at,
     };
 
     return userWithoutPassword as User;
