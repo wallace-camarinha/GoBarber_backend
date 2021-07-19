@@ -18,11 +18,18 @@
         "prettier"
     ],
     "rules": {
+      "no-useless-constructor": 0,
+      "@typescript-eslint/no-useless-constructor": ["error"],
       "no-use-before-define": "off",
       "class-methods-use-this": "off",
       "camelcase": "off",
-      "@typescript-eslint/no-use-before-define": [
-        "error"
+      "@typescript-eslint/naming-convention": [
+        "error",
+        {
+          "selector": "interface",
+          "prefix": ["I"],
+          "format": ["PascalCase"]
+        }
       ],
       "@typescript-eslint/no-unused-vars": "off",
       "import/extensions": [
