@@ -31,7 +31,7 @@ export default function ensureAuth(
       id: sub,
     };
     return next();
-  } catch (err) {
+  } catch {
     throw new AppError('Invalid Token', 401);
   }
 }
