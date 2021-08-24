@@ -8,6 +8,6 @@ const recoveryPasswordController = new RecoveryPasswordController();
 const resetPasswordController = new ResetPasswordController();
 
 passwordRouter.post('/recovery', recoveryPasswordController.create);
-passwordRouter.post('/reset', recoveryPasswordController.create);
+passwordRouter.post('/reset', resetPasswordController.create);
 
 export default passwordRouter;

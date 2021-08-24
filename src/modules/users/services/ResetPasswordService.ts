@@ -1,5 +1,5 @@
 import { injectable, inject } from 'tsyringe';
-import { isAfter, addHours } from 'date-fns';
+import { isAfter, addHours, differenceInHours } from 'date-fns';
 
 import AppError from '@shared/errors/AppError';
 import IUsersRepository from '../repositories/IUsersRepository';
@@ -20,17 +20,17 @@ class ResetPasswordService {
     @inject('UserTokensRepository')
     private userTokensRepository: IUserTokensRepository,
 
-    @inject('UserTokensRepository')
+    @inject('HashProvider')
     private hashProvider: IHashProvider,
   ) {}
 
   public async execute({ token, password }: IRequest): Promise<void> {
     const userToken = await this.userTokensRepository.findByToken(token);
+    console.log(userToken);
 
     if (!userToken) {
       throw new AppError('Invalid token');
     }
-
     const user = await this.usersRepository.findById(userToken.user_id);
 
     if (!user) {
