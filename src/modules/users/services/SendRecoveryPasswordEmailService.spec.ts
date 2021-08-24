@@ -62,6 +62,6 @@ describe('SendRecoveryPasswordEmail', () => {
       email: 'john.doe@example.com',
     });
 
-    await expect(generateToken).toHaveBeenCalledWith(user.id);
+    expect(generateToken).toHaveBeenCalledWith(user.id);
   });
 });
