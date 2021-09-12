@@ -15,66 +15,79 @@ describe('ListProviderMonthAvailability', () => {
   it('should be able to list the month availability from the provider', async () => {
     await fakeAppointmentsRepository.create({
       provider_id: 'user',
+      user_id: '123',
       date: new Date(2093, 9, 7, 8, 0, 0),
     });
 
     await fakeAppointmentsRepository.create({
       provider_id: 'user',
+      user_id: '123',
       date: new Date(2093, 9, 7, 9, 0, 0),
     });
 
     await fakeAppointmentsRepository.create({
       provider_id: 'user',
+      user_id: '123',
       date: new Date(2093, 9, 7, 10, 0, 0),
     });
 
     await fakeAppointmentsRepository.create({
       provider_id: 'user',
+      user_id: '123',
       date: new Date(2093, 9, 7, 11, 0, 0),
     });
 
     await fakeAppointmentsRepository.create({
       provider_id: 'user',
+      user_id: '123',
       date: new Date(2093, 9, 7, 12, 0, 0),
     });
 
     await fakeAppointmentsRepository.create({
       provider_id: 'user',
+      user_id: '123',
       date: new Date(2093, 9, 7, 13, 0, 0),
     });
 
     await fakeAppointmentsRepository.create({
       provider_id: 'user',
+      user_id: '123',
       date: new Date(2093, 9, 7, 14, 0, 0),
     });
 
     await fakeAppointmentsRepository.create({
       provider_id: 'user',
+      user_id: '123',
       date: new Date(2093, 9, 7, 15, 0, 0),
     });
 
     await fakeAppointmentsRepository.create({
       provider_id: 'user',
+      user_id: '123',
       date: new Date(2093, 9, 7, 16, 0, 0),
     });
 
     await fakeAppointmentsRepository.create({
       provider_id: 'user',
+      user_id: '123',
       date: new Date(2093, 9, 7, 17, 0, 0),
     });
 
     await fakeAppointmentsRepository.create({
       provider_id: 'user',
+      user_id: '123',
       date: new Date(2093, 9, 14, 8, 0, 0),
     });
 
     await fakeAppointmentsRepository.create({
       provider_id: 'user',
+      user_id: '123',
       date: new Date(2093, 9, 14, 10, 0, 0),
     });
 
     await fakeAppointmentsRepository.create({
       provider_id: 'user',
+      user_id: '123',
       date: new Date(2093, 9, 27, 8, 0, 0),
     });
 
