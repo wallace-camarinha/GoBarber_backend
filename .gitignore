@@ -3,3 +3,5 @@ coverage/*
 tmp/*
 !tmp/.gitkeep
 README.md
+.env
+ormconfig.json
